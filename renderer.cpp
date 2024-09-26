@@ -257,7 +257,6 @@ HRESULT InitRenderer(HINSTANCE hInstance, HWND hWnd, BOOL bWindow)
 
 	g_D3DDevice->CreateDepthStencilState( &depthStencilDesc, &g_DepthStateEnable );//深度有効ステート
 
-	//depthStencilDesc.DepthEnable = FALSE;
 	depthStencilDesc.DepthWriteMask	= D3D11_DEPTH_WRITE_MASK_ZERO;
 	g_D3DDevice->CreateDepthStencilState( &depthStencilDesc, &g_DepthStateDisable );//深度無効ステート
 
@@ -367,9 +366,6 @@ HRESULT InitRenderer(HINSTANCE hInstance, HWND hWnd, BOOL bWindow)
 	g_D3DDevice->CreateBuffer(&hBufferDesc, NULL, &g_GlitchBuffer);
 	g_ImmediateContext->VSSetConstantBuffers(2, 1, &g_GlitchBuffer);
 	g_ImmediateContext->PSSetConstantBuffers(2, 1, &g_GlitchBuffer);
-	//g_D3DDevice->CreateBuffer(&hBufferDesc, NULL, &g_ParamBuffer);
-	//g_ImmediateContext->VSSetConstantBuffers(2, 1, &g_ParamBuffer);
-	//g_ImmediateContext->PSSetConstantBuffers(2, 1, &g_ParamBuffer);
 
 	hBufferDesc.ByteWidth = sizeof(RANDOM);
 	hBufferDesc.Usage = D3D11_USAGE_DEFAULT;
