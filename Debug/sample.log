@@ -1,7 +1,0 @@
-﻿  camera.cpp
-  main.cpp
-  polygon.cpp
-C:\Users\ths30480\Desktop\GP23_DX11_01(配付版)\polygon.cpp(85,12): warning C4244: '引数': 'time_t' から 'unsigned int' への変換です。データが失われる可能性があります。
-  renderer.cpp
-  コードを生成中...
-  sample.vcxproj -> C:\Users\ths30480\Desktop\GP23_DX11_01(配付版)\Debug\sample.exe
